@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambiador de Color de Fondo Aleatorio</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        transition: background-color 0.5s ease;
+    }
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1>Cambiador de Color de Fondo Aleatorio</h1>
+    <button onclick="cambiarColor()">Cambiar Color de Fondo</button>
+
+    <script>
+        function cambiarColor() {
+            // Colores disponibles en formato hexadecimal
+            var colores = [
+                '#007bff', // Azul
+                '#28a745', // Verde
+                '#dc3545', // Rojo
+                '#ffc107', // Amarillo
+                '#17a2b8', // Cyan
+                '#6610f2'  // Púrpura
+            ];
+
+            // Escoge un índice aleatorio
+            var indice = Math.floor(Math.random() * colores.length);
+
+            // Cambia el color de fondo del body
+            document.body.style.backgroundColor = colores[indice];
+        }
+    </script>
+</body>
+</html>
